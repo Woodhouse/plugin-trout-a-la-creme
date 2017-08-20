@@ -8,14 +8,14 @@ class troutALaCreme {
     }
 
     init() {
-        this.listen(
-            `fish!`,
-            `fish`,
-            `standard`,
-            (from, interfaceName, params) => {
+        this.listen({
+            id: `fish!`,
+            listener: `fish`,
+            role: `standard`,
+            command: (from, interfaceName, params) => {
                 return `Today's fish is Trout a la Creme, enjoy your meal.`;
             }
-        )
+        })
     }
 }
 
